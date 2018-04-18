@@ -1,0 +1,12 @@
+@import '../../../app.component.scss';
+
+ul {
+  list-style-type: circle;
+  margin: 0;
+  padding-left:16px;
+  display: flex;
+  flex-direction: column;
+  li:nth-child(2n){
+    padding-bottom:5px;
+  }
+}

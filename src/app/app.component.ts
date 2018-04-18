@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import * as Typed from "typed.js";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'app';
+  ngOnInit(){
+    const type = new Typed('.headline', {
+      strings: ["Łukasz Senator"],
+      typeSpeed: 200,
+    });
+
+  }
 }

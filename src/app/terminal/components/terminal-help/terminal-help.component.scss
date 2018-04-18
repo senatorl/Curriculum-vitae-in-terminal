@@ -1,0 +1,15 @@
+.help-wrapper{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.column--first{
+  margin-right:100px;
+  font-weight:600;
+}
+
+.column{
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}

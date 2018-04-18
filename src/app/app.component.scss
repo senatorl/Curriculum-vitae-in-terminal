@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&subset=latin-ext');
+
+$prime-text-color: #d9c6ec;
+
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  background: #41295a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F0743, #41295a); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 20px;
+}
+
+h1, h2 {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+::ng-deep ul {
+  list-style-type: circle;
+  margin: 0;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cv-button-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+  justify-content: center;
+}
+
+::ng-deep .typed-cursor {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  .mat-headline {
+    font-size: 38px;
+  }
+}

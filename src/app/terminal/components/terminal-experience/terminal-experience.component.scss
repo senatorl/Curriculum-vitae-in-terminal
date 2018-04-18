@@ -1,0 +1,23 @@
+ul{
+  padding-left:0px;
+  li{
+    display: flex;
+    margin-top:15px;
+    flex-direction: column;
+  }
+  header{
+    font-weight:600;
+    color: #d9c6ec;
+  }
+  content{
+    display: flex;
+    white-space: pre-line;
+  }
+  footer{
+    font-style: italic;
+    color:  rgba(255,255,255,0.5);
+    &:before{
+      content:'*'
+    }
+  }
+}

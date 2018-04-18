@@ -1,0 +1,20 @@
+<pre #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <app-terminal-heading></app-terminal-heading>
+  <div>CV bash, version 4.4.12(1)-release (angular5)<br/>Type 'help' to see the list of available commands.</div>
+  <div *ngFor="let item of terminalData" [ngSwitch]="item.kind" class="terminal-data-wrapper">
+    <app-indicator [command]="item.command"></app-indicator>
+    <app-terminal-help *ngSwitchCase="'help'"></app-terminal-help>
+    <app-terminal-experience *ngSwitchCase="'experience'"></app-terminal-experience>
+    <app-terminal-freelance *ngSwitchCase="'freelance'"></app-terminal-freelance>
+    <app-terminal-about *ngSwitchCase="'about'"></app-terminal-about>
+    <app-terminal-contact *ngSwitchCase="'contact'"></app-terminal-contact>
+    <app-terminal-skills *ngSwitchCase="'skills'"></app-terminal-skills>
+    <app-terminal-not-found [command]="item.command" *ngSwitchCase="'notFound'"></app-terminal-not-found>
+  </div>
+  <form #form="ngForm" (ngSubmit)="onSubmit(searchValue)" class="input-wrapper">
+    <app-indicator></app-indicator>
+     <input name="terminal-input" #input1 autocomplete="off" [(ngModel)]="searchValue" required class="mat-input-element input" onblur="this.focus()" autofocus/>
+    </form>
+  </pre>
+
+
