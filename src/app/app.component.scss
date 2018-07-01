@@ -33,11 +33,9 @@ h1, h2 {
   font-family: 'Ubuntu Mono', monospace;
 }
 
-::ng-deep ul {
-  list-style-type: circle;
-  margin: 0;
-  padding-left: 16px;
+.wrapper {
   display: flex;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -46,6 +44,18 @@ h1, h2 {
   align-items: center;
   margin: 30px;
   justify-content: center;
+}
+
+.content {
+  flex: 1;
+}
+
+::ng-deep ul {
+  list-style-type: circle;
+  margin: 0;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 ::ng-deep .typed-cursor {

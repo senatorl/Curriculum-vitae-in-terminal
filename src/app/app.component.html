@@ -1,12 +1,18 @@
-<header>
-  <h1 class="mat-headline"><span class="headline"></span></h1>
-  <h2 class="mat-h2">Front-end
-    <small class="animated fadeInLeft">developer</small>
-  </h2>
-</header>
+<div class="wrapper">
 
-<app-terminal show-gt-sm></app-terminal>
-<div class="cv-button-wrapper">
-  <button mat-raised-button color="primary"  class="animated fadeInLeft">Download CV</button>
+  <header>
+    <h1 class="mat-headline"><span class="headline"></span></h1>
+    <h2 class="mat-h2">Front-end
+      <small class="animated fadeInLeft">developer</small>
+    </h2>
+  </header>
+  <section class="content">
+    <app-terminal show-gt-sm></app-terminal>
+    <div class="cv-button-wrapper">
+      <a href="../assets/CV.pdf" target="_blank">
+        <button mat-raised-button color="primary" class="animated fadeInLeft">Download CV</button>
+      </a>
+    </div>
+  </section>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
