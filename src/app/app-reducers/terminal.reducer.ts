@@ -2,59 +2,21 @@ import * as TerminalActions from "./terminal.actions";
 
 type Action = TerminalActions.All;
 
+export interface TerminalDataInterface {
+  kind: string;
+  input: string;
+}
 export default function TerminalReducer(state: Array<any> = [], action?: Action) {
   switch (action.type) {
-    case TerminalActions.HELP:
+    case TerminalActions.COMMAND:
       state.push({
-        kind: "help",
+        kind: action.command,
         command: action.input
       });
-      return state;
+      return state
 
-    case TerminalActions.CLEAR:
+    case TerminalActions.CLEAR_TERMINAL:
       state = [];
-      return state;
-
-    case TerminalActions.EXPERIENCE:
-      state.push({
-        kind: "experience",
-        command: action.input
-      });
-      return state;
-
-    case TerminalActions.FREELANCE:
-      state.push({
-        kind: "freelance",
-        command: action.input
-      });
-      return state;
-
-    case TerminalActions.CONTACT:
-      state.push({
-        kind: "contact",
-        command: action.input
-      });
-      return state;
-
-    case TerminalActions.ABOUT:
-      state.push({
-        kind: "about",
-        command: action.input
-      });
-      return state;
-
-    case TerminalActions.SKILLS:
-      state.push({
-        kind: "skills",
-        command: action.input
-      });
-      return state;
-
-    case TerminalActions.NOTFOUND:
-      state.push({
-        kind: "notFound",
-        command: action.input
-      });
       return state;
 
     default:

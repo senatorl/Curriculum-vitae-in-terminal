@@ -18,6 +18,7 @@ import { TerminalFreelanceComponent } from './terminal/components/terminal-freel
 import { TerminalExperienceComponent } from './terminal/components/terminal-experience/terminal-experience.component';
 import { TerminalSkillsComponent } from './terminal/components/terminal-skills/terminal-skills.component';
 import { TerminalHeadingComponent } from './terminal/components/terminal-heading/terminal-heading.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 
 @NgModule({
@@ -40,7 +41,10 @@ import { TerminalHeadingComponent } from './terminal/components/terminal-heading
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AppSharedModule.forRoot()
+    AppSharedModule.forRoot(),
+    StoreDevtoolsModule.instrument({
+      maxAge: 10
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

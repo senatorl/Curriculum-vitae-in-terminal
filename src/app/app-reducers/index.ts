@@ -1,7 +1,10 @@
-import TerminalReducer from "./terminal.reducer";
+import TerminalReducer, { TerminalDataInterface } from './terminal.reducer';
 import { ActionReducerMap } from "@ngrx/store";
-import { AppStore } from "../terminal/terminal.component";
 import { InjectionToken } from "@angular/core";
+
+export interface AppStore {
+  terminal: Array<TerminalDataInterface>;
+}
 
 export const reducers: ActionReducerMap<AppStore> = {
   terminal: TerminalReducer,
