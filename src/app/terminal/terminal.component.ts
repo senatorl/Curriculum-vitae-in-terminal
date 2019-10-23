@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 import { Observable } from 'rxjs/Observable';
 import { Store } from '@ngrx/store';
@@ -13,19 +13,14 @@ import { AppStore } from '../app-reducers';
   templateUrl: './terminal.component.html',
   styleUrls: ['./terminal.component.scss']
 })
-export class TerminalComponent implements OnInit {
+export class TerminalComponent  {
   @ViewChild('input1') inputEl: ElementRef;
 
-  terminal: Observable<Array<TerminalDataInterface>>;
-  terminalData: TerminalDataInterface[];
+  terminal$: Observable<Array<TerminalDataInterface>>;
   searchValue: string = null;
 
   constructor(private store: Store<AppStore>) {
-
-    this.terminal = store.select('terminal');
-    this.terminal.subscribe((data) => {
-      this.terminalData = data;
-    });
+    this.terminal$ = store.select('terminal');
   }
 
   onSubmit(input) {
@@ -45,10 +40,6 @@ export class TerminalComponent implements OnInit {
 
       this.inputEl.nativeElement.focus();
     }
-  }
-
-
-  ngOnInit() {
   }
 
 }

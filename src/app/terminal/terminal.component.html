@@ -1,7 +1,7 @@
 <pre #scrollMe [scrollTop]="scrollMe.scrollHeight">
   <app-terminal-heading></app-terminal-heading>
   <div>CV bash, version 4.4.12(1)-release (angular5)<br/>Type 'help' to see the list of available commands.</div>
-  <div *ngFor="let item of terminalData" [ngSwitch]="item.kind" class="terminal-data-wrapper">
+  <div *ngFor="let item of terminal$ | async" [ngSwitch]="item.kind" class="terminal-data-wrapper">
     <app-indicator [command]="item.command"></app-indicator>
     <app-terminal-help *ngSwitchCase="'help'"></app-terminal-help>
     <app-terminal-experience *ngSwitchCase="'experience'"></app-terminal-experience>
